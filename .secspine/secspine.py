@@ -217,6 +217,7 @@ def cmd_render():
                        f"{(sections.get('Was','') or '').splitlines()[0] if sections.get('Was') else ''}")
         out.append("")
 
+    os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     with open(REPORT, "w", encoding="utf-8") as fh:
         fh.write("\n".join(out))
     print(f"Geschrieben: {os.path.relpath(REPORT, ROOT)} ({len(active)} aktiv, "
