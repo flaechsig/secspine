@@ -1,7 +1,7 @@
 ---
 name: secspine-report
 description: >-
-  Phase 6 des Pentests (Bericht): die Befunde prüfen und befunde/06_bericht.md neu generieren,
+  Phase 6 des Pentests (Bericht): die Befunde prüfen und security-review/report.md neu generieren,
   Risiko je Fund einschätzen (Schwere × Wahrscheinlichkeit), offene Lücken benennen. Verwenden,
   wenn ein Zwischenstand oder der Abschlussbericht ansteht, oder bei Aufruf /secspine-report.
 ---
@@ -9,13 +9,13 @@ description: >-
 # secspine-report
 
 Du lieferst den Bericht — die eigentliche Lieferung des Tests. Der Bericht wird **generiert**,
-nicht von Hand geschrieben: die Wahrheit steht in `befunde/findings/`.
+nicht von Hand geschrieben: die Wahrheit steht in `security-review/`.
 
 ## Vorgehen
 
 1. `python3 .secspine/secspine.py check` — muss OK melden. Mängel (fehlende Repro/Maßnahme bei
    bestätigten Funden, tote Evidence-Pfade, doppelte IDs) zuerst in den Befunden beheben.
-2. `python3 .secspine/secspine.py render` — schreibt `befunde/06_bericht.md`.
+2. `python3 .secspine/secspine.py render` — schreibt `security-review/report.md`.
 3. **Durchsehen**, nicht nachdichten: stimmt je Fund die Risiko-Einordnung (Schwere ×
    Wahrscheinlichkeit)? Ist die Maßnahme konkret und umsetzbar? Fehlt bei `verified` der
    Nachweis der Behebung?

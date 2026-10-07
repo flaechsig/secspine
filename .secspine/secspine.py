@@ -5,7 +5,7 @@ Nur Standardbibliothek. Siehe .secspine/STANDARD.md.
 
 Befehle:
   check            Befunde formal prüfen (Pflichtfelder, Lebenszyklus, Evidence, IDs)
-  render           befunde/06_bericht.md aus findings/ neu bauen
+  render           security-review/report.md neu aus den Befunden bauen
   list             Überblick: ID, Schwere, Status, Titel
   new <ID> "Titel" Befund aus der Vorlage anlegen
 """
@@ -17,9 +17,9 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FINDINGS_DIR = os.path.join(ROOT, "befunde", "findings")
+FINDINGS_DIR = os.path.join(ROOT, "security-review")
 TEMPLATE = os.path.join(ROOT, ".secspine", "finding-template.md")
-REPORT = os.path.join(ROOT, "befunde", "06_bericht.md")
+REPORT = os.path.join(ROOT, "security-review", "report.md")
 
 STATUSES = ["candidate", "confirmed", "dismissed", "fixed", "verified"]
 SEVERITIES = ["info", "low", "medium", "high", "critical"]
@@ -91,7 +91,7 @@ def load_all():
     if not os.path.isdir(FINDINGS_DIR):
         return out
     for fn in sorted(os.listdir(FINDINGS_DIR)):
-        if fn.endswith(".md"):
+        if fn.endswith(".md") and ID_RE.match(fn[:-3]):
             p = os.path.join(FINDINGS_DIR, fn)
             meta, sections = parse(p)
             out.append((fn, meta, sections))
@@ -109,7 +109,7 @@ def cmd_check():
     findings = load_all()
     problems, seen = [], {}
     if not findings:
-        print("Keine Befunde in befunde/findings/.")
+        print("Keine Befunde in security-review/.")
         return 0
     for fn, meta, sections in findings:
         fid = meta.get("id", "")
@@ -168,11 +168,11 @@ def cmd_render():
     today = _dt.date.today().isoformat()
     out = [
         "<!-- GENERIERT von .secspine/secspine.py render — nicht von Hand ändern. -->",
-        "<!-- Quelle: befunde/findings/. Ändere dort, dann neu rendern. -->",
+        "<!-- Quelle: security-review/. Ändere dort, dann neu rendern. -->",
         "",
         "# Phase 6 — Bericht",
         "",
-        f"Stand: {today}. Generiert aus den Befunden in `befunde/findings/`.",
+        f"Stand: {today}. Generiert aus den Befunden in `security-review/`.",
         "",
     ]
     active = [f for f in findings if f[1].get("status") != "dismissed"]
