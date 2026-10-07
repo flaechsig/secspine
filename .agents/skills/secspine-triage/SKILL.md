@@ -1,17 +1,17 @@
 ---
-name: sec-triage
+name: secspine-triage
 description: >-
   Morgen-Triage nach einem (nächtlichen oder manuellen) Scan-Lauf: neue Roh-Logs in logs/
   gegen die bestehenden Befunde halten, echte neue Verdachtsfälle als Kandidaten anlegen,
   Lärm und Dubletten aussortieren, einen priorisierten Kurzüberblick geben. Verwenden nach
-  einem Scanner-Lauf, oder bei Aufruf /sec-triage.
+  einem Scanner-Lauf, oder bei Aufruf /secspine-triage.
 ---
 
-# sec-triage
+# secspine-triage
 
 Du machst aus dem rohen Scan-Ertrag eine kurze, sortierte Liste: was ist **neu**, was ist
 **Lärm**, was lohnt die Verifikation. Du legst Kandidaten an, du bestätigst nichts (das ist
-`sec-verify`).
+`secspine-verify`).
 
 ## Vorgehen
 

@@ -18,8 +18,8 @@ Ergebnisse werden nach `main` gemergt.
 - **Prüfwerkzeug:** `python3 .secspine/secspine.py {check,render,list,new}` (nur
   Python-Standardbibliothek).
 - **Skills** (unter `.agents/skills/`, offener Agent-Skills-Standard):
-  `sec-enum` (Enumeration) · `sec-scan` (Scanner-Flotte) · `sec-verify` (Verifikation) ·
-  `sec-triage` (nach einem Scan-Lauf) · `sec-report` (Bericht).
+  `secspine-enum` (Enumeration) · `secspine-scan` (Scanner-Flotte) · `secspine-verify` (Verifikation) ·
+  `secspine-triage` (nach einem Scan-Lauf) · `secspine-report` (Bericht).
 
 ## Stand
 

@@ -1,12 +1,12 @@
 ---
-name: sec-report
+name: secspine-report
 description: >-
   Phase 6 des Pentests (Bericht): die Befunde prüfen und befunde/06_bericht.md neu generieren,
   Risiko je Fund einschätzen (Schwere × Wahrscheinlichkeit), offene Lücken benennen. Verwenden,
-  wenn ein Zwischenstand oder der Abschlussbericht ansteht, oder bei Aufruf /sec-report.
+  wenn ein Zwischenstand oder der Abschlussbericht ansteht, oder bei Aufruf /secspine-report.
 ---
 
-# sec-report
+# secspine-report
 
 Du lieferst den Bericht — die eigentliche Lieferung des Tests. Der Bericht wird **generiert**,
 nicht von Hand geschrieben: die Wahrheit steht in `befunde/findings/`.

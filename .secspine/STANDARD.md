@@ -82,11 +82,11 @@ Vor jedem Abschluss einer Phase: `check` muss OK melden, dann `render`.
 
 | Phase (Drehbuch) | Skill | Rolle |
 |---|---|---|
-| 2 Enumeration | `sec-enum` | Angriffsfläche aufnehmen → `logs/` + `befunde/02` |
-| 3 Schwachstellen | `sec-scan` | Scanner-Flotte, Roh-Output → `logs/`, Kandidaten anlegen |
-| 4 Verifikation | `sec-verify` | einen Verdacht bestätigen/verwerfen, minimaler PoC |
-| (Nachtlauf) | `sec-triage` | was lief rein, was ist neu, was ist Lärm |
-| 6 Bericht | `sec-report` | `check` + `render`, Risiko einschätzen, Lücken benennen |
+| 2 Enumeration | `secspine-enum` | Angriffsfläche aufnehmen → `logs/` + `befunde/02` |
+| 3 Schwachstellen | `secspine-scan` | Scanner-Flotte, Roh-Output → `logs/`, Kandidaten anlegen |
+| 4 Verifikation | `secspine-verify` | einen Verdacht bestätigen/verwerfen, minimaler PoC |
+| (Nachtlauf) | `secspine-triage` | was lief rein, was ist neu, was ist Lärm |
+| 6 Bericht | `secspine-report` | `check` + `render`, Risiko einschätzen, Lücken benennen |
 
 Grundsatz aller Skills (von `spine-impact`): **frag das System, nicht den Menschen.** Stack,
 offene Ports, ob Docker läuft, welche Scanner da sind — selbst erkennen. Den Menschen nur
@@ -95,7 +95,7 @@ fragen, wo Scope, Freigabe oder ein echtes Urteil ansteht.
 ## 7. Scanner-Flotte
 
 secspine schreibt die Scanner nicht neu; es dirigiert fertige. Fehlt einer lokal, aber
-Docker ist da, läuft er als Container. Zuordnung in `sec-scan`:
+Docker ist da, läuft er als Container. Zuordnung in `secspine-scan`:
 
 | Ebene | Werkzeug | fällt in Phase |
 |---|---|---|
@@ -106,6 +106,6 @@ Docker ist da, läuft er als Container. Zuordnung in `sec-scan`:
 | bekannte Lücken (Templates) | Nuclei | 3 |
 | Ports/Dienste | nmap | 2 |
 
-Scanner liefern **Kandidaten** (`status: candidate`), keine Befunde. Erst `sec-verify` (der
+Scanner liefern **Kandidaten** (`status: candidate`), keine Befunde. Erst `secspine-verify` (der
 Mensch mit dem Werkzeug) macht daraus `confirmed` oder `dismissed`. Scanner-Lärm bleibt Lärm,
 bis er bestätigt ist.

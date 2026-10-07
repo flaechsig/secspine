@@ -1,15 +1,15 @@
 ---
-name: sec-scan
+name: secspine-scan
 description: >-
   Phase 3 des Pentests (Schwachstellenanalyse): die Scanner-Flotte gegen ein eigenes,
   autorisiertes Ziel fahren — SAST (Semgrep), Abhängigkeiten/Container/IaC (Trivy), Secrets
   (gitleaks), laufende App/API (OWASP ZAP), bekannte Lücken (Nuclei) — Roh-Output nach logs/,
   je echtem Verdacht einen Befund-Kandidaten in befunde/findings/ anlegen. Wählt die Scanner
-  passend zum Stack selbst und fährt fehlende als Docker-Container. Verwenden nach sec-enum
-  oder bei Aufruf /sec-scan.
+  passend zum Stack selbst und fährt fehlende als Docker-Container. Verwenden nach secspine-enum
+  oder bei Aufruf /secspine-scan.
 ---
 
-# sec-scan
+# secspine-scan
 
 Du dirigierst fertige Scanner gegen ein **eigenes, autorisiertes** Ziel und machst aus ihren
 Treffern **Kandidaten** (`status: candidate`), keine fertigen Befunde. Scope in
@@ -47,11 +47,11 @@ Varianten (Baseline), die Vollläufe später automatisiert.
    `python3 .secspine/secspine.py new F-NN "<Titel>"`, dann Frontmatter füllen
    (`status: candidate`, `severity`, `target`, `source: <scanner>`, `evidence: [logs/…]`,
    wenn bekannt `cwe`/`owasp`) und den Abschnitt `## Was` schreiben. Repro/Auswirkung/Maßnahme
-   bleiben für `sec-verify`.
+   bleiben für `secspine-verify`.
 4. Am Ende `python3 .secspine/secspine.py check` — muss OK melden.
 
 ## Regeln
 
 - Scanner gegen Produktion nur mit Freigabe und schonend (Baseline, kein aktiver Angriffs-Scan).
-- Treffer sind Verdacht, nicht Wahrheit. Bestätigt wird in Phase 4 (`sec-verify`).
+- Treffer sind Verdacht, nicht Wahrheit. Bestätigt wird in Phase 4 (`secspine-verify`).
 - Nächste freie `F-`Nummer nehmen; `check` meldet Doppelungen.

@@ -1,14 +1,14 @@
 ---
-name: sec-enum
+name: secspine-enum
 description: >-
   Phase 2 des Pentests (Enumeration): die Angriffsfläche eines eigenen, autorisierten Ziels
   aufnehmen — offene Ports und Dienste, Technologie-Fingerprint, Web-Endpoints — Roh-Output
   nach logs/, Verdichtung nach befunde/02_enumeration.md. Erkennt Stack und Umgebung selbst.
   Verwenden, wenn der Scope steht (Phase 0) und die Angriffsfläche beschrieben werden soll,
-  oder bei Aufruf /sec-enum.
+  oder bei Aufruf /secspine-enum.
 ---
 
-# sec-enum
+# secspine-enum
 
 Du nimmst die Angriffsfläche eines **eigenen, autorisierten** Ziels auf. Zuerst den Scope
 in `befunde/00_scope.md` lesen — teste nur, was dort drinsteht. Steht kein Scope oder keine
@@ -30,6 +30,6 @@ Freigabe (GATE-2), stoppst du und fragst. Alles andere findest du selbst.
 
 - Log-Namen nach Konvention: `logs/<phase>_<tool>_<datum>.txt`.
 - Keine Verfügbarkeit gefährden; im Zweifel kleiner dosieren.
-- Was du an Verdachtsmomenten siehst, wird **hier noch kein Befund** — das macht `sec-scan`
-  (automatisiert) und `sec-verify` (bestätigt). Hier nur beschreiben.
+- Was du an Verdachtsmomenten siehst, wird **hier noch kein Befund** — das macht `secspine-scan`
+  (automatisiert) und `secspine-verify` (bestätigt). Hier nur beschreiben.
 - Gate: weiter erst, wenn `befunde/02_enumeration.md` die Angriffsfläche beschreibt.

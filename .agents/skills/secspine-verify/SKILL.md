@@ -1,13 +1,13 @@
 ---
-name: sec-verify
+name: secspine-verify
 description: >-
   Phase 4 des Pentests (Verifikation): einen Befund-Kandidaten bestätigen oder verwerfen —
   mit dem kleinstmöglichen, schadensfreien Nachweis — und auf confirmed oder dismissed setzen,
   inkl. Reproduktion, Auswirkung und Maßnahme. Verwenden für einen einzelnen Verdacht aus
-  befunde/findings/, oder bei Aufruf /sec-verify (optional mit einer Befund-ID).
+  befunde/findings/, oder bei Aufruf /secspine-verify (optional mit einer Befund-ID).
 ---
 
-# sec-verify
+# secspine-verify
 
 Du beantwortest für **einen** Verdacht genau eine Frage: lässt er sich reproduzierbar und
 **schadensfrei** auslösen? Das Ergebnis ist ein Statuswechsel, kein Scan. Arbeite an einem
@@ -15,7 +15,7 @@ eigenen, autorisierten Ziel im Scope.
 
 ## Argument
 
-Eine Befund-ID, z. B. `/sec-verify F-05`. Ohne ID: `python3 .secspine/secspine.py list`,
+Eine Befund-ID, z. B. `/secspine-verify F-05`. Ohne ID: `python3 .secspine/secspine.py list`,
 die `candidate`-Einträge zeigen, einen vorschlagen.
 
 ## Vorgehen
