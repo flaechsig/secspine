@@ -54,6 +54,11 @@ def delivery_tree(root: Path) -> None:
             shutil.copytree(skill, skills / skill.name)
     (root / ".claude").mkdir()
     os.symlink("../.agents/skills", root / ".claude/skills")
+    # Sensible Lauf-Artefakte schützen: logs/ (rohe Scanner-Ausgaben, evtl. Secrets) und
+    # certs/ (Schlüssel) gehören nie in Git. Pro-Ordner-.gitignore wirkt auch beim curl-Install.
+    for d in ("logs", "certs"):
+        (root / d).mkdir(parents=True, exist_ok=True)
+        (root / d / ".gitignore").write_text("*\n!.gitignore\n", encoding="utf-8")
     files = sorted(p.relative_to(root).as_posix() for p in root.rglob("*")
                    if p.is_file() or p.is_symlink())
     files.append(".secspine/MANIFEST")
