@@ -5,7 +5,7 @@
 |---|---|
 | Stories | ⚪ offen 8 · 🟡 in Arbeit 2 · ✅ verifiziert 3 |
 | Requirements | keine |
-| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 2 |
+| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 3 |
 
 ## [E-BACKBONE](epics/E-BACKBONE.md) — Befund-Kette und Prüfwerkzeug
 
