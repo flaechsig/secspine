@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7
+
+`secspine-run` arbeitet auf einem eigenen `security/<datum>`-Branch und schließt ihn am Ende
+sichtbarkeits-bewusst: privat/ohne Remote per --no-ff mergen, bei öffentlichem Hauptzweig mit
+offenen Funden auf dem Branch belassen (kein Offenlegen). Nie pushen ohne Zustimmung (US-0014).
+
+
 ## 0.6
 
 Neuer Skill `secspine-run`: Standardlauf Scan → Verifikation → Bericht ohne Rückfrage, Halt
