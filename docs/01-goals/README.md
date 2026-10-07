@@ -3,7 +3,7 @@
 <!-- generated:status -->
 | | Anzahl |
 |---|---|
-| Stories | ⚪ offen 7 · 🟡 in Arbeit 3 · ✅ verifiziert 3 |
+| Stories | ⚪ offen 6 · 🟡 in Arbeit 4 · ✅ verifiziert 3 |
 | Requirements | keine |
 | [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 3 |
 
@@ -42,7 +42,7 @@ Status: 🟡 in Arbeit
 | Story | Titel | Status |
 |---|---|---|
 | [US-0006](stories/US-0006.md) | secspine in eine Anwendung installieren | ⚪ offen |
-| [US-0007](stories/US-0007.md) | secspine aktualisieren | ⚪ offen |
+| [US-0007](stories/US-0007.md) | secspine aktualisieren | 🟡 in Arbeit |
 | [US-0012](stories/US-0012.md) | Eigenständig, mit optionaler Doku-Anbindung | 🟡 in Arbeit |
 
 ## [E-NACHTLAUF](epics/E-NACHTLAUF.md) — Automatisierte Läufe
