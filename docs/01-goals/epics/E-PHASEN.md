@@ -13,4 +13,5 @@ und erkennen die nötige Konfiguration selbst.
 
 <!-- generated:stories -->
 - [US-0005](../stories/US-0005.md) — Phasen-Skills von Enumeration bis Bericht
+- [US-0014](../stories/US-0014.md) — Standardlauf bis zur Dokumentations-Frage
 <!-- /generated -->
