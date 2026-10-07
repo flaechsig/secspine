@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4
+
+docspine-Modus (US-0012): `secspine-report` destilliert bestätigte Funde nach Freigabe in
+arc42 Kapitel 11 (eigener Abschnitt, Präfix `SEC-`, Status-Spalte), legt Aufträge als Stories
+im Epic `E-SECURITY` an und verlinkt beidseitig; behobene Einträge bleiben erhalten.
+Installer schützt `logs/` und `certs/` per mitgeliefertem `.gitignore` (auch beim curl-Install).
+
+
 ## 0.3.1
 
 Fix: `render` legt den Ordner `security-review/` an, falls er fehlt (vorher Absturz,
