@@ -1,3 +1,5 @@
+<!-- secspine 0.1 · source: .secspine/STANDARD.md · do not edit in projects -->
+
 # secspine — Standard
 
 > Das Rückgrat eines Security-Tests ist die **Befund-Kette**: von einem Verdacht über
