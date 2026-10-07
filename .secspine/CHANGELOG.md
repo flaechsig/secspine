@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3
+
+Engagement-Ablage mit englischen Namen (docspine-Konvention: Namen englisch, Inhalt in
+Projektsprache): Ordner `security-review/` mit `scope.md`, `enumeration.md`, dem generierten
+`report.md` und den Befund-Dateien `F-NN.md` in einem Ordner. Das Prüfwerkzeug erkennt
+Befunde am ID-Muster. Ersetzt `befunde/` mit `00_scope.md`/`06_bericht.md`.
+
+
 ## 0.2
 
 Portscan standardmäßig mit naabu (MIT) statt nmap; nmap bleibt optional für die
