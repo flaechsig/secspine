@@ -14,4 +14,5 @@ Stack aus und fährt fehlende Scanner als Container.
 <!-- generated:stories -->
 - [US-0003](../stories/US-0003.md) — Scanner passend zum Stack wählen
 - [US-0004](../stories/US-0004.md) — Fehlende Scanner als Container fahren
+- [US-0013](../stories/US-0013.md) — Ports permissiv scannen (naabu)
 <!-- /generated -->
