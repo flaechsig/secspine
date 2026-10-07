@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5
+
+`secspine.py version` zeigt die installierte Version und prüft über den dist-Zweig auf
+Updates (nur Python-stdlib, offline-sicher). Erster Teil von US-0007.
+
+
 ## 0.4
 
 docspine-Modus (US-0012): `secspine-report` destilliert bestätigte Funde nach Freigabe in
