@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.6
+
+Neuer Skill `secspine-run`: Standardlauf Scan → Verifikation → Bericht ohne Rückfrage, Halt
+erst vor der Dokumentations-Frage. Kandidaten werden schadensfrei aus der Analyse verifiziert;
+aktive Nachweise werden markiert statt blind ausgeführt und am Ende gemeldet (US-0014). Der
+docspine-Modus gleicht Funde mit schon dokumentierten Risiken ab, statt sie doppelt zu führen.
+
+
 ## 0.5
 
 `secspine.py version` zeigt die installierte Version und prüft über den dist-Zweig auf

@@ -38,6 +38,8 @@ Dann zusätzlich — **vorschlagen, dann nach Freigabe** ausführen:
    vor den technischen Schulden**. Eigener Präfix **`SEC-1`, `SEC-2`, …**, getrennt von der
    `R-`Reihe des Projekts. Spalten: ID, Risiko, Schwere, **Status** (`offen`/`behoben`), Story.
    Verworfene Funde nicht als Risiko führen; relevante „geprüft, kein Risiko" als Fußnote.
+   Gleicht sich ein Fund mit einem schon dokumentierten Risiko (z. B. einer `R-`Zeile), dort
+   ergänzen oder darauf verweisen, statt ihn doppelt zu führen.
 2. **Aufträge als Stories**, gebündelt in einem Epic **`E-SECURITY`** („Sicherheit"). Jede
    `SEC-`Zeile verweist auf ihre Story, jede Story zurück auf ihr `SEC-`Risiko.
 3. **`security-review/` ist dann Arbeitsstand** — in die `.gitignore` des Projekts aufnehmen
