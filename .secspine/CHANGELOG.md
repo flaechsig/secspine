@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.1
+
+Fix: `render` legt den Ordner `security-review/` an, falls er fehlt (vorher Absturz,
+wenn noch kein Befund angelegt war).
+
+
 ## 0.3
 
 Engagement-Ablage mit englischen Namen (docspine-Konvention: Namen englisch, Inhalt in
