@@ -5,7 +5,7 @@
 |---|---|
 | Stories | ⚪ offen 7 · 🟡 in Arbeit 2 · ✅ verifiziert 3 |
 | Requirements | keine |
-| [Entscheidungen](../09-decisions/) | vorgeschlagen 5 |
+| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 1 |
 
 ## [E-BACKBONE](epics/E-BACKBONE.md) — Befund-Kette und Prüfwerkzeug
 
@@ -63,7 +63,7 @@ Status: 🟡 in Arbeit
 
 ## Offene Fragen
 
-- [09-decisions/ADR-0005.md](../09-decisions/ADR-0005.md): UNKNOWN — offene Frage: Soll secspine unter 0BSD stehen oder unter einer anderen Lizenz?
+_keine_
 
 ## Offene Entscheidungen
 
@@ -71,7 +71,6 @@ Status: 🟡 in Arbeit
 - [ADR-0002](../09-decisions/ADR-0002.md) — Prüfwerkzeug nur mit der Python-Standardbibliothek
 - [ADR-0003](../09-decisions/ADR-0003.md) — Scanner dirigieren statt selbst bauen
 - [ADR-0004](../09-decisions/ADR-0004.md) — Eigenständig, Doku-Anbindung optional
-- [ADR-0005](../09-decisions/ADR-0005.md) — Lizenz
 
 ## Widersprüche
 
