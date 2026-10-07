@@ -3,9 +3,9 @@
 <!-- generated:status -->
 | | Anzahl |
 |---|---|
-| Stories | ⚪ offen 7 · 🟡 in Arbeit 2 · ✅ verifiziert 3 |
+| Stories | ⚪ offen 8 · 🟡 in Arbeit 2 · ✅ verifiziert 3 |
 | Requirements | keine |
-| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 1 |
+| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 2 |
 
 ## [E-BACKBONE](epics/E-BACKBONE.md) — Befund-Kette und Prüfwerkzeug
 
@@ -33,6 +33,7 @@ Status: 🟡 in Arbeit
 |---|---|---|
 | [US-0003](stories/US-0003.md) | Scanner passend zum Stack wählen | 🟡 in Arbeit |
 | [US-0004](stories/US-0004.md) | Fehlende Scanner als Container fahren | ⚪ offen |
+| [US-0013](stories/US-0013.md) | Ports permissiv scannen (naabu) | ⚪ offen |
 
 ## [E-INSTALL](epics/E-INSTALL.md) — Installation und Anbindung
 
