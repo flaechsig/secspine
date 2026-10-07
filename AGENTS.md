@@ -20,7 +20,7 @@ Dieses Projekt dokumentiert sich nach docspine.
 Vor jedem Commit, spätestens vor dem Merge, in dieser Reihenfolge prüfen:
 
 ```
-# noch keine Tests — mit spine-gate Build und erste Tests anbinden,
+# noch keine Tests — mit docspine-gate Build und erste Tests anbinden,
 # damit sie von Anfang an mit docspine verbunden sind
 python3 .docspine/docspine.pyz render
 python3 .docspine/docspine.pyz check --without-tests
