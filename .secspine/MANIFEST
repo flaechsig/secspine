@@ -10,3 +10,5 @@
 .secspine/STANDARD.md
 .secspine/finding-template.md
 .secspine/secspine.py
+certs/.gitignore
+logs/.gitignore
