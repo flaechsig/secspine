@@ -22,8 +22,8 @@ Treffern **Kandidaten** (`status: candidate`), keine fertigen Befunde. Scope in
 - **Läuft das Ziel?** Offene Ports aus `befunde/02_enumeration.md` → wenn eine Web-App/API
   erreichbar ist, kommt DAST (ZAP) dazu.
 - **Was ist lokal da?** `command -v` für `semgrep trivy gitleaks nuclei`. Fehlt einer und
-  `docker` ist da, fahr ihn als Container (z. B. `returntocorp/semgrep`, `aquasec/trivy`,
-  `zricethezav/gitleaks`, `projectdiscovery/nuclei`, `ghcr.io/zaproxy/zaproxy`).
+  `docker` ist da, fahr ihn als Container (z. B. `semgrep/semgrep`, `aquasec/trivy`,
+  `ghcr.io/gitleaks/gitleaks`, `projectdiscovery/nuclei`, `ghcr.io/zaproxy/zaproxy`).
 
 ## Flotte
 
@@ -37,6 +37,23 @@ Treffern **Kandidaten** (`status: candidate`), keine fertigen Befunde. Scope in
 
 Lange Läufe (ZAP Full, Nuclei komplett) sind Nachtlauf-Kandidaten — hier die schnellen
 Varianten (Baseline), die Vollläufe später automatisiert.
+
+### Bewährte Aufrufe
+
+Roh-Output immer nach `logs/` umleiten. Bei Docker das Ziel **read-only** mounten.
+
+- **Trivy** (Deps + Secrets + IaC in einem Lauf):
+  `trivy fs --scanners vuln,secret,misconfig --no-progress <ziel>`
+- **gitleaks** (Git-Historie):
+  `docker run --rm -v "$PWD":/repo:ro ghcr.io/gitleaks/gitleaks:latest detect --source=/repo --no-banner -v`
+- **Semgrep** (SAST): eine **konkrete Regelmenge** angeben, z. B. `--config p/default`.
+  **Nicht** `--config auto` mit `--metrics=off` kombinieren — `auto` verlangt aktive
+  Metrik und bricht sonst ab (`Cannot create auto config when metrics are off`):
+  `docker run --rm -v "$PWD":/src:ro semgrep/semgrep semgrep scan /src --config p/default --metrics=off`
+
+Semgrep meldet oft viele Treffer in Test-, Dev- und generiertem Code (Codegen-Templates,
+Dev-TLS-Helfer). Das ist in der Triage Kontext, kein eigener Befund je Treffer — echte
+Produktionspfade von Test/Dev/Codegen trennen.
 
 ## Aus Treffern Kandidaten machen
 
