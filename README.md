@@ -23,5 +23,15 @@ Ergebnisse werden nach `main` gemergt.
 
 ## Stand
 
-Junges Projekt. Wird gerade unter docspine aufgesetzt; Vision, Ziele und die ersten
-Stories (u. a. ein `curl`-Installationsweg analog zu docspine) entstehen dort.
+Junges Projekt, unter docspine aufgesetzt: Vision, Ziele, Entscheidungen und erste Stories
+stehen in `docs/`. Als Nächstes u. a. ein `curl`-Installationsweg (US-0006).
+
+## Lizenz
+
+[0BSD](LICENSE): Jeder darf secspine ohne Bedingungen nutzen, kopieren, ändern und
+weitergeben.
+
+## Dank
+
+secspine dirigiert fertige, frei verfügbare Scanner, statt eigene zu bauen. Dank an die
+Teams dahinter — Werkzeuge und ihre Lizenzen in [ACKNOWLEDGEMENTS.md](ACKNOWLEDGEMENTS.md).
