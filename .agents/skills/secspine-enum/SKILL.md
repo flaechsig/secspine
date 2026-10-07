@@ -17,8 +17,8 @@ Freigabe (GATE-2), stoppst du und fragst. Alles andere findest du selbst.
 ## Vorgehen
 
 1. **Ziel bestimmen** aus `befunde/00_scope.md` (Adressen, Ports, was ausdrücklich raus ist).
-2. **Ports/Dienste**: `nmap` gegen die Scope-Adressen. Roh-Output nach
-   `logs/02_nmap_<datum>.txt`. Keine aggressiven/zerstörerischen Skripte.
+2. **Ports/Dienste**: bevorzugt `naabu` (permissiv, MIT), sonst `nmap`. Roh-Output nach
+   `logs/02_ports_<datum>.txt`. Keine aggressiven/zerstörerischen Skripte.
 3. **Web-Fingerprint**: Header, TLS, Technologie der erreichbaren Web-Dienste. Nach
    `logs/02_headers_<datum>.txt`.
 4. **Endpoints/Pfade**: vorhandene Routen sichten (sanft, keine Brute-Force gegen Produktion

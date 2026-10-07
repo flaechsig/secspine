@@ -1,4 +1,4 @@
-<!-- secspine 0.1 · source: .secspine/STANDARD.md · do not edit in projects -->
+<!-- secspine 0.2 · source: .secspine/STANDARD.md · do not edit in projects -->
 
 # secspine — Standard
 
@@ -35,7 +35,7 @@ Eine Datei `befunde/findings/<ID>.md`. Frontmatter (englische Schlüssel) + Flie
 | `status` | `candidate` → `confirmed`/`dismissed` → `fixed` → `verified` |
 | `severity` | `info` \| `low` \| `medium` \| `high` \| `critical` |
 | `target` | was getestet wurde, z. B. `registry:5001` |
-| `source` | wer/was den Verdacht fand: `manual`, `semgrep`, `trivy`, `gitleaks`, `zap`, `nuclei`, `nmap` |
+| `source` | wer/was den Verdacht fand: `manual`, `semgrep`, `trivy`, `gitleaks`, `zap`, `nuclei`, `naabu`, `nmap` |
 | `discovered` | `YYYY-MM-DD` |
 
 Optional: `cwe` (z. B. `CWE-306`), `owasp` (z. B. `A05:2021`), `evidence` (Liste von
@@ -90,7 +90,7 @@ Vor jedem Abschluss einer Phase: `check` muss OK melden, dann `render`.
 | (Nachtlauf) | `secspine-triage` | was lief rein, was ist neu, was ist Lärm |
 | 6 Bericht | `secspine-report` | `check` + `render`, Risiko einschätzen, Lücken benennen |
 
-Grundsatz aller Skills (von `spine-impact`): **frag das System, nicht den Menschen.** Stack,
+Grundsatz aller Skills: **frag das System, nicht den Menschen.** Stack,
 offene Ports, ob Docker läuft, welche Scanner da sind — selbst erkennen. Den Menschen nur
 fragen, wo Scope, Freigabe oder ein echtes Urteil ansteht.
 
@@ -106,7 +106,7 @@ Docker ist da, läuft er als Container. Zuordnung in `secspine-scan`:
 | Secrets in Git-Historie | gitleaks | 3 |
 | Laufende App/API (DAST) | OWASP ZAP | 3 |
 | bekannte Lücken (Templates) | Nuclei | 3 |
-| Ports/Dienste | nmap | 2 |
+| Ports | naabu (optional nmap für Dienstversion) | 2 |
 
 Scanner liefern **Kandidaten** (`status: candidate`), keine Befunde. Erst `secspine-verify` (der
 Mensch mit dem Werkzeug) macht daraus `confirmed` oder `dismissed`. Scanner-Lärm bleibt Lärm,
