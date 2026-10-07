@@ -16,7 +16,7 @@ Du machst aus dem rohen Scan-Ertrag eine kurze, sortierte Liste: was ist **neu**
 ## Vorgehen
 
 1. **Was ist neu?** Die jüngsten `logs/03_*`/`logs/0x_*` gegen die bestehenden
-   `befunde/findings/` halten (`python3 .secspine/secspine.py list`). Treffer, die schon
+   `security-review/` halten (`python3 .secspine/secspine.py list`). Treffer, die schon
    einen Befund haben, nicht doppeln.
 2. **Lärm trennen**: bekannte False Positives, informelle Hinweise, Dubletten über Scanner
    hinweg zusammenfassen. Lärm bleibt im Log, wird kein Befund.

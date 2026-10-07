@@ -4,7 +4,7 @@ description: >-
   Phase 3 des Pentests (Schwachstellenanalyse): die Scanner-Flotte gegen ein eigenes,
   autorisiertes Ziel fahren — SAST (Semgrep), Abhängigkeiten/Container/IaC (Trivy), Secrets
   (gitleaks), laufende App/API (OWASP ZAP), bekannte Lücken (Nuclei) — Roh-Output nach logs/,
-  je echtem Verdacht einen Befund-Kandidaten in befunde/findings/ anlegen. Wählt die Scanner
+  je echtem Verdacht einen Befund-Kandidaten in security-review/ anlegen. Wählt die Scanner
   passend zum Stack selbst und fährt fehlende als Docker-Container. Verwenden nach secspine-enum
   oder bei Aufruf /secspine-scan.
 ---
@@ -13,13 +13,13 @@ description: >-
 
 Du dirigierst fertige Scanner gegen ein **eigenes, autorisiertes** Ziel und machst aus ihren
 Treffern **Kandidaten** (`status: candidate`), keine fertigen Befunde. Scope in
-`befunde/00_scope.md` zuerst lesen; nur im Scope scannen.
+`security-review/scope.md` zuerst lesen; nur im Scope scannen.
 
 ## Config selbst finden (nicht fragen)
 
 - **Stack erkennen**: nach Quellcode, `Dockerfile`, `package.json`/`pom.xml`/`requirements.txt`,
   IaC (`*.tf`, k8s-YAML) sehen → welche Scanner sinnvoll sind.
-- **Läuft das Ziel?** Offene Ports aus `befunde/02_enumeration.md` → wenn eine Web-App/API
+- **Läuft das Ziel?** Offene Ports aus `security-review/enumeration.md` → wenn eine Web-App/API
   erreichbar ist, kommt DAST (ZAP) dazu.
 - **Was ist lokal da?** `command -v` für `semgrep trivy gitleaks nuclei`. Fehlt einer und
   `docker` ist da, fahr ihn als Container (z. B. `semgrep/semgrep`, `aquasec/trivy`,

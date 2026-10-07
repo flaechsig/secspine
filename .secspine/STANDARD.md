@@ -1,4 +1,4 @@
-<!-- secspine 0.2 · source: .secspine/STANDARD.md · do not edit in projects -->
+<!-- secspine 0.3 · source: .secspine/STANDARD.md · do not edit in projects -->
 
 # secspine — Standard
 
@@ -12,18 +12,18 @@
 
 ## 1. Idee
 
-Das `00_DREHBUCH.md` beschreibt die **Phasen** (0–6). secspine liefert die **Werkzeuge**,
-die in den Phasen greifen, und hält die Ergebnisse zusammen:
+secspine arbeitet in **Phasen** (Abschnitt 6). Es liefert die **Werkzeuge**, die in den
+Phasen greifen, und hält die Ergebnisse zusammen:
 
-- `befunde/findings/` — ein Befund je Datei, mit fester ID. Das ist die Quelle.
-- `befunde/*.md` — die von Hand gepflegten Phasen-Notizen (Scope, Enumeration, …).
+- `security-review/` — alle Artefakte des Tests in einem Ordner: ein Befund je Datei
+  (`F-NN.md`, `BB-NN.md`; das Werkzeug erkennt Befunde am ID-Muster), dazu die von Hand
+  gepflegten Notizen `scope.md` und `enumeration.md` sowie der generierte `report.md`.
 - `logs/` — rohe Tool-Ausgaben, unverändert. Jeder Befund verweist auf seinen Log.
 - `screenshots/` — Bildnachweise.
-- `befunde/06_bericht.md` — **generiert** aus `findings/`, nicht von Hand geschrieben.
 
 ## 2. Der Befund
 
-Eine Datei `befunde/findings/<ID>.md`. Frontmatter (englische Schlüssel) + Fließtext
+Eine Datei `security-review/<ID>.md`. Frontmatter (englische Schlüssel) + Fließtext
 (deutsch). Vorlage: `.secspine/finding-template.md`.
 
 ### 2.1 Pflicht-Frontmatter
@@ -74,7 +74,7 @@ freie `F-`Nummer. Das Prüfwerkzeug meldet Doppelungen.
 
 - `check` — jeder Befund formal gültig; ab `confirmed` sind Repro/Auswirkung/Maßnahme da;
   referenzierte Evidence-Dateien existieren; IDs eindeutig. Meldet `OK` oder listet Mängel.
-- `render` — baut `befunde/06_bericht.md` aus `findings/` neu.
+- `render` — baut `security-review/report.md` neu aus den Befunden.
 - `list` — Überblick: ID, Schwere, Status, Titel.
 - `new <ID> "<Titel>"` — legt einen Befund aus der Vorlage an.
 
@@ -84,7 +84,7 @@ Vor jedem Abschluss einer Phase: `check` muss OK melden, dann `render`.
 
 | Phase (Drehbuch) | Skill | Rolle |
 |---|---|---|
-| 2 Enumeration | `secspine-enum` | Angriffsfläche aufnehmen → `logs/` + `befunde/02` |
+| 2 Enumeration | `secspine-enum` | Angriffsfläche aufnehmen → `logs/` + `security-review/enumeration.md` |
 | 3 Schwachstellen | `secspine-scan` | Scanner-Flotte, Roh-Output → `logs/`, Kandidaten anlegen |
 | 4 Verifikation | `secspine-verify` | einen Verdacht bestätigen/verwerfen, minimaler PoC |
 | (Nachtlauf) | `secspine-triage` | was lief rein, was ist neu, was ist Lärm |

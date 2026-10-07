@@ -4,7 +4,7 @@ description: >-
   Phase 4 des Pentests (Verifikation): einen Befund-Kandidaten bestätigen oder verwerfen —
   mit dem kleinstmöglichen, schadensfreien Nachweis — und auf confirmed oder dismissed setzen,
   inkl. Reproduktion, Auswirkung und Maßnahme. Verwenden für einen einzelnen Verdacht aus
-  befunde/findings/, oder bei Aufruf /secspine-verify (optional mit einer Befund-ID).
+  security-review/, oder bei Aufruf /secspine-verify (optional mit einer Befund-ID).
 ---
 
 # secspine-verify
@@ -20,7 +20,7 @@ die `candidate`-Einträge zeigen, einen vorschlagen.
 
 ## Vorgehen
 
-1. Den Kandidaten `befunde/findings/<ID>.md` lesen (`## Was`).
+1. Den Kandidaten `security-review/<ID>.md` lesen (`## Was`).
 2. **Kleinsten Nachweis planen**: der minimale Proof of Concept, der den Verdacht zeigt,
    ohne Daten zu verändern, zu löschen oder die Verfügbarkeit zu gefährden. Schreib-/
    Lösch-Tests nur read-only nachbilden oder sofort sauber zurücknehmen (wie bei F-01:
