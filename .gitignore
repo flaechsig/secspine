@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Engagement-/Testdaten gehören NICHT ins Produkt-Repo (nur Beispiele, keine echten Läufe)
+logs/
+screenshots/
+certs/
+*.pem
+*.key
+.secrets*
+befunde/findings/F-*.md
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# docspine-Arbeitsstände, die nicht eingecheckt werden sollen
+docs/.obsidian/
