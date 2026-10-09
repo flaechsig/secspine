@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.8
+
+Im docspine-Modus gelten die Regeln von docspine (ADR-0008). Ab docspine 0.21 legt
+`secspine-report` je bestätigtem Fund ein `docs/11-risks/SEC-NNNN.md` an, statt eine
+Tabellenzeile zu schreiben; Stories nennen ihr Risiko in `addresses`, Verweise von Hand und
+„behoben am …“ entfallen. Ein `R-`, das sich als Security-Thema herausstellt, wird durch ein
+`SEC-` abgelöst. Ältere docspine-Versionen behalten die Tabelle als Übergang. `secspine-run`
+zählt offene `SEC-`Risiken und die Stories dazu als offene Lücken vor Merge und Push.
+
+
 ## 0.7
 
 `secspine-run` arbeitet auf einem eigenen `security/<datum>`-Branch und schließt ihn am Ende
