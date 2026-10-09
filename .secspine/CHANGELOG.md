@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.9
+
+Offene Lücken nicht veröffentlichen (ADR-0009). Arbeitsweise: Bei öffentlichem Hauptzweig
+bleiben offene `SEC-` mit ihren Stories auf dem Security-Branch, Fix-Branches zweigen davon ab,
+nach `main` geht alles, wenn die `SEC-` behoben sind. Notbremse: `secspine.py pre-push`
+verweigert einen Push, dessen Stand ein offenes `SEC-` ohne `publish: <Datum>` enthält;
+`secspine.py install-hook` richtet ihn als Git-Hook ein (ergänzt einen vorhandenen Hook, setzt
+kein `core.hooksPath`). `secspine-run` bietet das beim ersten offenen `SEC-` an.
+
+
 ## 0.8
 
 Im docspine-Modus gelten die Regeln von docspine (ADR-0008). Ab docspine 0.21 legt

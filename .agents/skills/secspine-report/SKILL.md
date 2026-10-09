@@ -75,6 +75,9 @@ dabei das Update von docspine vor.
   (`logs/` und `certs/` schützt secspine bereits). Der `report.md` bleibt lokal.
 - Die docspine-Prüfung laufen lassen (`render`, dann `check`), bis sie OK meldet.
 - Das **Beheben** der Funde ist Sache des Zielprojekts (eigene Branches), nicht von secspine.
+- **Öffentliches Repo** (ADR-0009): Die neuen `SEC-` und ihre Stories bleiben auf dem
+  Security-Branch, bis sie `closed` sind; Fix-Branches zweigen von ihm ab. Weise darauf hin
+  und auf die Sperre vor dem Push (`secspine.py install-hook`), falls sie fehlt.
 
 ## Regeln
 
