@@ -3,7 +3,7 @@
 <!-- generated:status -->
 | | Anzahl |
 |---|---|
-| Stories | ⚪ offen 6 · 🟡 in Arbeit 5 · ✅ verifiziert 3 |
+| Stories | ⚪ offen 6 · 🟡 in Arbeit 5 · ✅ verifiziert 4 |
 | Requirements | keine |
 | [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 5 |
 
@@ -62,6 +62,7 @@ Status: 🟡 in Arbeit
 |---|---|---|
 | [US-0005](stories/US-0005.md) | Phasen-Skills von Enumeration bis Bericht | 🟡 in Arbeit |
 | [US-0014](stories/US-0014.md) | Standardlauf bis zur Dokumentations-Frage | 🟡 in Arbeit |
+| [US-0015](stories/US-0015.md) | Offene Lücken nicht veröffentlichen | ✅ verifiziert |
 
 ## Offene Fragen
 
