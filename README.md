@@ -34,7 +34,7 @@ für die Scanner Docker (fehlende laufen als Container); `curl` und `tar` für d
 ## Standard & Regeln
 
 Wie ein Befund aufgebaut ist, der Lebenszyklus und die Scanner-Flotte stehen in
-`.secspine/STANDARD.md`. Das Prüfwerkzeug: `python3 .secspine/secspine.py {check,render,list,new}`.
+`.secspine/STANDARD.md`. Das Prüfwerkzeug: `python3 .secspine/secspine.py {check,render,list,new,version,pre-push,install-hook}`.
 Ist die Anwendung ein Projekt mit Agenten-Einstieg (`AGENTS.md`), gehört dort ein kurzer
 Verweis auf `.secspine/STANDARD.md` hinein.
 
