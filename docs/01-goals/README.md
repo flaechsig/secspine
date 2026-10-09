@@ -65,7 +65,7 @@ Status: 🟡 in Arbeit
 
 ## Offene Fragen
 
-- [09-decisions/ADR-0009.md](../09-decisions/ADR-0009.md): UNKNOWN — offene Frage: Wie kommt die Sperre ins Projekt? Möglich sind ein Hook unter `.secspine/hooks/` plus `git config core.hooksPath` (ändert die Git-Konfiguration des Projekts und verdrängt andere Hooks) oder eine Kopie nach `.git/hooks/pre-push` (nur lokal, überschreibt einen vorhandenen Hook). Das klärt die Umsetzung.
+_keine_
 
 ## Offene Entscheidungen
 
