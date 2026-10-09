@@ -5,7 +5,7 @@
 |---|---|
 | Stories | ⚪ offen 6 · 🟡 in Arbeit 5 · ✅ verifiziert 3 |
 | Requirements | keine |
-| [Entscheidungen](../09-decisions/) | vorgeschlagen 5 · angenommen 3 |
+| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 4 |
 
 ## [E-BACKBONE](epics/E-BACKBONE.md) — Befund-Kette und Prüfwerkzeug
 
@@ -73,7 +73,6 @@ _keine_
 - [ADR-0002](../09-decisions/ADR-0002.md) — Prüfwerkzeug nur mit der Python-Standardbibliothek
 - [ADR-0003](../09-decisions/ADR-0003.md) — Scanner dirigieren statt selbst bauen
 - [ADR-0004](../09-decisions/ADR-0004.md) — Eigenständig, Doku-Anbindung optional
-- [ADR-0008](../09-decisions/ADR-0008.md) — Im docspine-Modus gelten die Regeln von docspine
 
 ## Widersprüche
 

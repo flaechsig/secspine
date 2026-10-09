@@ -43,6 +43,10 @@ und schließt den Branch am Ende.
 3. **Sichtbarkeit prüfen** (`git remote` + Hoster): ist der Hauptzweig **öffentlich**, **nicht
    mergen und nicht pushen**, solange bestätigte Funde **offen** sind — das legt Schwachstellen
    offen. Dann auf dem Branch belassen und sagen: schließen, sobald behoben (oder Repo privat).
+   In docspine-Projekten zählt als offen auch jedes `docs/11-risks/SEC-NNNN.md` mit
+   `status: open`, jede Story, die ein solches `SEC-` in `addresses` nennt, und jede
+   Commit-Nachricht oder Branch-Bezeichnung, die die Lücke beschreibt. Das Präfix `SEC-` macht
+   sie mit `git grep` und `git log --grep` auffindbar.
 4. **Schließen**: ist die Basis **privat oder ohne Remote** und sind keine blockierenden Punkte
    offen (Doku-Entscheidung getroffen), den Branch per `git merge --no-ff` in die Basis
    zurückführen und löschen. **Pushen** nur mit ausdrücklicher Zustimmung.
