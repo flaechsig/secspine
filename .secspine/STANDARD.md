@@ -1,4 +1,4 @@
-<!-- secspine 0.7 · source: .secspine/STANDARD.md · do not edit in projects -->
+<!-- secspine 0.8 · source: .secspine/STANDARD.md · do not edit in projects -->
 
 # secspine — Standard
 
