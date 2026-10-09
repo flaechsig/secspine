@@ -5,7 +5,7 @@
 |---|---|
 | Stories | ⚪ offen 6 · 🟡 in Arbeit 5 · ✅ verifiziert 3 |
 | Requirements | keine |
-| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 4 |
+| [Entscheidungen](../09-decisions/) | vorgeschlagen 4 · angenommen 5 |
 
 ## [E-BACKBONE](epics/E-BACKBONE.md) — Befund-Kette und Prüfwerkzeug
 
@@ -65,7 +65,7 @@ Status: 🟡 in Arbeit
 
 ## Offene Fragen
 
-_keine_
+- [09-decisions/ADR-0009.md](../09-decisions/ADR-0009.md): UNKNOWN — offene Frage: Wie kommt die Sperre ins Projekt? Möglich sind ein Hook unter `.secspine/hooks/` plus `git config core.hooksPath` (ändert die Git-Konfiguration des Projekts und verdrängt andere Hooks) oder eine Kopie nach `.git/hooks/pre-push` (nur lokal, überschreibt einen vorhandenen Hook). Das klärt die Umsetzung.
 
 ## Offene Entscheidungen
 
